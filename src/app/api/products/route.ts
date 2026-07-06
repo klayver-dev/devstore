@@ -1,5 +1,5 @@
-import data from "../data.json";
+import { getFeaturedProducts } from "@/data/products";
 
 export function GET() {
-  return Response.json(data.products);
+  return Response.json(getFeaturedProducts());
 }

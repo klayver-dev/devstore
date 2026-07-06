@@ -1,8 +1,7 @@
-import data from "../../data.json";
+import { getFeaturedProducts } from "@/data/products";
 
 export async function GET() {
-  await new Promise((resolver) => setTimeout(resolver, 1000));
-  const featuredProducts = data.products.filter((product) => product.featured);
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  return Response.json(featuredProducts);
+  return Response.json(getFeaturedProducts());
 }

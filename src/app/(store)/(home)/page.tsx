@@ -1,28 +1,11 @@
-import { Api } from "@/data/api";
-import { Product } from "@/data/types/product";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getFeaturedProducts, getAllProducts } from "@/data/products";
 
 // Busca os 3 produtos em destaque
-async function getFeaturedProducts(): Promise<Product[]> {
-  const response = await Api("/products/featured", {
-    next: {
-      revalidate: 60 * 60,
-    },
-  });
-  return response.json();
-}
 
 // Busca todos os produtos
-async function getAllProducts(): Promise<Product[]> {
-  const response = await Api("/products", {
-    next: {
-      revalidate: 60 * 60,
-    },
-  });
-  return response.json();
-}
 
 export const metadata: Metadata = {
   title: "Home",

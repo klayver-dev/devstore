@@ -8,6 +8,7 @@ import { CartWidget } from "./cart";
 import { SearchForm } from "./search-form";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Suspense } from "react";
 
 export const Header = () => {
   return (
@@ -22,7 +23,9 @@ export const Header = () => {
         </Link>
 
         <div className="hidden md:block">
-          <SearchForm />
+          <Suspense fallback={null}>
+            <SearchForm />
+          </Suspense>
         </div>
       </div>
 
@@ -58,7 +61,9 @@ export const Header = () => {
 
           <SheetContent side="right" className="border-zinc-800 bg-zinc-950">
             <div className="mt-8 flex flex-col gap-6 px-6">
-              <SearchForm />
+              <Suspense fallback={null}>
+                <SearchForm />
+              </Suspense>
 
               <div className="h-px bg-zinc-800" />
 
