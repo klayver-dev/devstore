@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevStore
 
-## Getting Started
+Uma aplicação de e-commerce desenvolvida com **Next.js**, utilizando o **App Router** para criar uma experiência moderna, responsiva e otimizada. O projeto simula uma loja virtual com catálogo de produtos, pesquisa, carrinho de compras e páginas de detalhes dos produtos.
 
-First, run the development server:
+## ✨ Funcionalidades
+
+- Vitrine de produtos em destaque
+- Catálogo completo de produtos
+- Página de detalhes do produto
+- Pesquisa de produtos
+- Carrinho de compras
+- Interface responsiva
+- Componentes reutilizáveis
+- Navegação otimizada com App Router
+
+## 🚀 Tecnologias
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Lucide React
+- ESLint
+- Cypress
+
+## ⚙️ Como executar
+
+### Clone o repositório
+
+```bash
+git clone https://github.com/klayver-dev/devstore.git
+```
+
+### Acesse a pasta do projeto
+
+```bash
+cd devstore
+```
+
+### Instale as dependências
+
+```bash
+npm install
+```
+
+### Execute a aplicação
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Scripts
 
-## Learn More
+```bash
+npm run dev      # Inicia o servidor de desenvolvimento
+npm run build    # Gera a build de produção
+npm run start    # Executa a aplicação em produção
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📚 Objetivo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto foi desenvolvido com o objetivo de aprofundar conhecimentos em desenvolvimento Front-end utilizando Next.js e seu ecossistema moderno, explorando conceitos como:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- App Router
+- Server Components
+- Client Components
+- Componentização
+- Organização de projetos
+- Estilização com Tailwind CSS
+- Boas práticas de desenvolvimento
+- Responsividade
+- Consumo de APIs
 
-## Deploy on Vercel
+## 📄 Licença
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Projeto desenvolvido para fins de estudo e aprendizado.
