@@ -14,10 +14,10 @@ export const Header = () => {
   return (
     <div className="flex items-center justify-between">
       {/* Logo + Busca */}
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-2 sm:gap-5 min-w-0">
         <Link
           href="/"
-          className="text-xl font-extrabold text-white sm:text-2xl"
+          className="text-lg font-extrabold text-white sm:text-2xl whitespace-nowrap"
         >
           Dev Store
         </Link>
@@ -49,34 +49,45 @@ export const Header = () => {
       </div>
 
       {/* Mobile */}
-      <div className="flex items-center gap-3 md:hidden">
+      <div className="flex items-center gap-2 sm:gap-3 md:hidden shrink-0">
         <CartWidget />
 
         <Sheet>
           <SheetTrigger asChild>
-            <button className="rounded-md p-2 hover:bg-zinc-800">
+            <button className="rounded-md p-1 sm:p-2 hover:bg-zinc-800 transition-colors">
               <Menu className="h-6 w-6 cursor-pointer" />
             </button>
           </SheetTrigger>
 
-          <SheetContent side="right" className="border-zinc-800 bg-zinc-950">
-            <div className="mt-8 flex flex-col gap-6 px-6">
-              <Suspense fallback={null}>
-                <SearchForm />
-              </Suspense>
+          {/* AJUSTE RESPONSIVO E TRAVA EM 320px */}
+          <SheetContent
+            side="right"
+            className="w-[320px] min-[320px]:w-[85vw] sm:w-[350px] border-zinc-800 bg-zinc-950 p-4 sm:p-6 overflow-x-hidden"
+          >
+            <div className="mt-10 sm:mt-8 flex flex-col gap-4 sm:gap-6 w-full">
+              {/* O input de busca se adapta ao container */}
+              <div className="w-full">
+                <Suspense fallback={null}>
+                  <SearchForm />
+                </Suspense>
+              </div>
 
-              <div className="h-px bg-zinc-800" />
+              <div className="h-px bg-zinc-800 w-full" />
 
-              <Link href="/" className="flex items-center gap-3">
+              <Link
+                href="/"
+                className="flex items-center gap-3 hover:bg-zinc-900 p-2 rounded-md transition-colors"
+              >
                 <Image
                   alt="Photo profile"
                   src="https://github.com/klayver-dev.png"
                   width={40}
                   height={40}
-                  className="rounded-full"
+                  className="rounded-full shrink-0"
                 />
-
-                <span>Account</span>
+                <span className="text-sm sm:text-base truncate text-white">
+                  Account
+                </span>
               </Link>
             </div>
           </SheetContent>

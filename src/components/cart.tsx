@@ -113,7 +113,7 @@ export function CartWidget() {
         {items.length > 0 && (
           <div className="p-6 border-t border-zinc-800 mt-auto bg-zinc-950">
             <div className="flex items-center justify-between font-semibold">
-              <span>Total</span>
+              <span className="text-white">Total:</span>
               <span className="text-violet-500 text-lg">
                 {cartTotal.toLocaleString("pt-BR", {
                   style: "currency",

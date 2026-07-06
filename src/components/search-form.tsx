@@ -19,18 +19,22 @@ export function SearchForm() {
 
     router.push(`/search?q=${query}`);
   };
+
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex w-[320px] items-center gap-3 rounded-full bg-zinc-900 px-5 py-3 ring-zinc-700"
+      // AJUSTE: w-full para mobile, md:w-[320px] para desktop.
+      // Adicionado overflow-hidden e min-w-0 por precaução para o texto não vazar.
+      className="flex w-full md:w-[320px] min-w-0 items-center gap-3 rounded-full bg-zinc-900 px-4 py-3 sm:px-5 ring-zinc-700 overflow-hidden"
     >
-      <Search className="w-5 h-5 text-zinc-500" />
+      <Search className="w-5 h-5 text-zinc-500 shrink-0" />
       <input
         type="text"
         name="q"
         defaultValue={query}
         placeholder="Buscar produtos..."
-        className="flex-1 bg-transparent text-sm outline-none placeholder:text-zinc-500"
+        // AJUSTE: min-w-0 junto com flex-1 garante que o input nunca passe do tamanho do form
+        className="flex-1 bg-transparent text-sm outline-none placeholder:text-zinc-500 min-w-0"
       />
     </form>
   );
